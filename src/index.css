@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-espresso: #211914;
+  --color-cream: #F3EBDD;
+  --color-copper: #B77B43;
+  --color-ink: #38291F;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: Inter, system-ui, sans-serif;
+  --shadow-soft: 0 20px 50px -20px rgba(33, 25, 20, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  background: #F3EBDD;
+  color: #38291F;
+  font-family: Inter, system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+:focus-visible {
+  outline: 2px solid #B77B43;
+  outline-offset: 3px;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-wide transition duration-300;
+  }
+  .btn-copper {
+    @apply bg-copper text-white hover:bg-[#9d6836];
+  }
+  .btn-outline-light {
+    @apply border border-cream/40 text-cream hover:bg-cream hover:text-espresso;
+  }
+  .btn-outline-dark {
+    @apply border border-espresso/30 text-espresso hover:bg-espresso hover:text-cream;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.3em] text-copper;
+  }
+  .section {
+    @apply mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 md:py-28;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+

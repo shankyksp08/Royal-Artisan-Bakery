@@ -1,0 +1,6 @@
+{
+  "name": "Royal Artisan Bakery",
+  "description": "Royal Artisan Bakery, 84-86 Petty France, London SW1H 9EA. Artisan breads, pastries, cakes, sandwiches and coffee in the heart of Westminster.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
